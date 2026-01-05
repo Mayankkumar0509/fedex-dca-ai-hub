@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import joblib
 import numpy as np
+import os
 
 app = FastAPI()
 
@@ -51,3 +52,7 @@ def predict(data: dict):
         "priority_score": round(priority_score, 2),
         "priority_level": priority_level
     }
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
