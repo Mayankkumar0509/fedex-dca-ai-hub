@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FedEx DCA AI Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>FedEx DCA AI Dashboard</h2>
+
+<input id="amount" placeholder="Amount Due">
+<input id="days" placeholder="Days Overdue">
+<input id="risk" placeholder="Customer Risk Score (0-1)">
+<input id="past" placeholder="Past Recovery Rate (0-1)">
+
+<br><br>
+<button onclick="predict()">Predict</button>
+
+<p id="result"></p>
+
+<script src="script.js"></script>
+</body>
+</html>
